@@ -1,0 +1,39 @@
+Arguments: 
+  /usr/bin/nodejs /usr/share/yarn/bin/yarn.js add electron
+
+PATH: 
+  /home/synapticsycophant/bin:/home/synapticsycophant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  7.10.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "case_study_trial",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Francis Rubio",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com:443
+      at Object.exports._errnoException (util.js:1050:11)
+      at errnoException (dns.js:33:15)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:73:26)

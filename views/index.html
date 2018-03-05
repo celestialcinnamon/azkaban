@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+    <title>Azkaban Prison Manager</title>      
+    <link rel="stylesheet" href="../src/bulma.css">        
+  </head>
+
+  <body>
+    <section class="section hero is-fullwidth is-bold is-warning">
+      <div class="container">
+        <h1 class="title">Title</h1>
+      </div>
+    </section>
+    <button class="button">localStorage</button>
+    
+    <script>
+      const { dialog } = require('electron').remote;
+    
+      const button = document.querySelector('.button');
+      button.addEventListener('click', function(e){
+        dialog.showMessageBox({
+          type: 'error',
+          message: "Hello!"
+        });
+      });
+    </script>
+  </body>
+
+</html>

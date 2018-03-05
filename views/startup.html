@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>Jailicious</title>
+  <link rel="stylesheet"
+        href="../src/bulma.css">
+        
+  <style>
+    *{
+      transition: all 300ms;
+    }
+    
+    .spinner{
+      height: 0;
+      width: 0;
+      opacity: 0;
+      border-radius: 50%;
+      box-sizing: border-box;
+      will-change: height, width, opacity;
+    }
+    
+    .spinner.js-spin{
+      height: 100px;
+      width: 100px;
+      opacity: 1;
+      border: 3px solid rgba(200, 200, 200, 0.5);
+      border-left: 3px solid dodgerblue;
+      animation: spinAround 700ms infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <form class="js-authenticate">
+      <input type="text" required name="userString"/>
+      <input type="submit" value="Submit" class="button"/>
+    </form>
+    
+    <div class="spinner"></div>
+  </main>
+
+  <script>
+  const Authenticator = require(`${__dirname}/../src/Authenticator`);
+  const UserInterface = require(`${__dirname}/../src/UserInterface`);
+  
+  const auth = new Authenticator();
+  const ui = new UserInterface();
+
+  const frmAuth = document.querySelector('.js-authenticate');
+  frmAuth.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    ui.showIndeterminateProgress(document.querySelector('.spinner'));
+    
+    auth.verifyAgent(this.userString.value)
+      .then(authorized => {
+        if(authorized){
+          console.log('You are authorized');
+          location.href = `${__dirname}/login.html`;    
+        } else {
+          console.log('You are not authorized. Get out.');        
+        }
+      });
+    
+    ui.hideIndeterminateProgress(document.querySelector('.spinner'));
+  });
+  </script>
+</body>
+
+</html>

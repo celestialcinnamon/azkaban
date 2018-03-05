@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="./src/style.css" />
+</head>
+<body class="signup">
+<div class="frost">
+    <div class="wrapper">
+        <div class="container">
+            <h2>Sign up</h2>
+            <p>Signing up for an account entitles you to a crap ton of features and privileges only guys as awesome as you can have access to.</p>
+        </div>
+        
+        <form action="#!" class="js-sign-up-form with-floaters">
+            <div class="input-field">
+                <input type="text" placeholder="@spo1_delacruz" name="username" id="username" required/>
+                <label for="username">Username</label>
+
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="ricardodelacruz09@mail.com" name="emailAcc" id="emailAcc" required/>
+                <label for="emailAcc">Email</label>
+
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="********" name="password" id="password" required/>
+                <label for="password">Password</label>
+
+            </div>
+            <div class="buttons">
+                <button class="js-sign-up" type="submit">Sign up</button>
+                <a href="./views/login.html">I have an account</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="js-toast toast">
+  <div class="toast--content"></div>
+</div>
+
+<div class="loader">
+  <div class="spinner"></div>
+</div>
+
+<script src="./src/index.js"></script>
+
+</body>
+</html>

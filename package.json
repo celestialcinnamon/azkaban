@@ -1,0 +1,20 @@
+{
+  "name": "case_study_trial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/browserify/bin/cmd.js ./src/index.js -o ./src/bundle.js && electron index.js",
+    "build": "./node_modules/browserify/bin/cmd.js ./src/importer.js -o ./src/bundle.js",
+    "greet": "echo 'Hello, world!'"
+  },
+  "author": "Francis Rubio",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^14.5.0",
+    "electron": "^1.8.2",
+    "is-reachable": "^2.4.0",
+    "sanitize": "^2.0.1"
+  }
+}
