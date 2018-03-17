@@ -8,3 +8,4 @@ A prison management system.
 4. Commit your changes.
 5. Push the changes to your Github repo using `git push -u origin master`.
 6. Send me a pull request.
+7. Changes
